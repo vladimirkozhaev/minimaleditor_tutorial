@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="minimaleditor.editors.MpeTextEditor"
+            default="true"
+            extensions="mpe"
+            icon="icons/sample.png"
+            id="minimaleditor.editors.TextEditor"
+            name="Text Editor"
+            symbolicFontName="minimaleditor.fontDefinition1">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.themes">
+    <themeElementCategory
+        id="com.vogella.eclipse.preferences.mythemeElementCategory"
+        label="vogella category">
+        <description>
+            An example theme category
+        </description>
+    </themeElementCategory>
+    <colorDefinition
+        categoryId="com.vogella.eclipse.preferences.mythemeElementCategory"
+        id="com.vogella.eclipse.preferences.myFirstColorDefinition"
+        label="vogella color"
+        value="COLOR_DARK_BLUE">
+        <description>
+            Your description for the color
+        </description>
+    </colorDefinition>
+    <fontDefinition
+        categoryId="com.vogella.eclipse.preferences.mythemeElementCategory"
+        id="com.vogella.eclipse.preferences.myFirstFontDefinition"
+        label="vogella Font"
+        value="Lucida Sans-italic-18">
+        <description>
+            Your description for the font
+        </description>
+    </fontDefinition>
+    <theme
+          id="minimaleditor.theme2"
+          name="Test Theme">
+       <colorOverride
+             id="minimaleditor.colorOverride1"
+             value="COLOR_DARK_BLUE">
+       </colorOverride>
+       <fontOverride
+             id="minimaleditor.fontOverride1"
+             value="Lucida Sans-italic-18">
+       </fontOverride>
+    </theme>
+</extension>
+
+</plugin>
